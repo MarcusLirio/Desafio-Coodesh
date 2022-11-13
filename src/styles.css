@@ -1,0 +1,260 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html 
+{
+    overflow-x: hidden;
+    overflow: hidden;
+    height: 100%;
+}
+:root 
+{
+    --lt: #111;
+    --bd: #111;
+}
+
+ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 10%;
+    padding: 0;
+    min-height: 300px;
+}
+
+ul li
+{
+    padding: auto;
+    margin: 0;
+    display: grid;
+    align-items: center;
+}
+
+ul li h3, h1
+{
+    color: var(--lt);
+    text-align: center;
+}
+
+section 
+{
+    display: grid;
+    color: white;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 70px auto 70px;
+    grid-template-areas: "header header" "player tabelas";
+
+}
+
+header 
+{
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    background-color: #00BFFF;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+player
+{
+    width: calc(100% - 100px);
+    height: calc(100% - 30%);
+    grid-area: player;
+
+    margin-top: 15px;
+}
+
+player aside 
+{
+    background-color: #D8BFD8;
+    border: 2px solid var(--bd);
+}
+
+player .container .row
+{
+    margin-top: 10px;
+}
+
+player .container .row .play 
+{
+    color: var(--lt);
+    font-size: 70px;
+    text-align: start;
+    padding: 0;
+    position: relative;
+    right: 18px;
+    
+}
+
+player .container .row .play button
+{
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    
+}
+
+player .container .row .play button i
+{
+   cursor: pointer;
+    
+}
+
+player .container .row .progress
+{
+    margin-top: 50px;
+}
+
+player .container .row  p
+{
+    padding: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--lt);
+    position: relative;
+    right: 5px;
+}
+
+player .container .row  h4
+{
+    padding: 0;
+    font-size: 20px;
+    color: var(--lt);
+    position: relative;
+    right: 3px;
+}
+
+player .container .row  .col-sm-6
+{
+    padding: 0 15px 0 0;
+}
+
+player .container .row  .col-sm-6 button
+{
+    padding: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 100%;
+    color: var(--lt);
+    position: relative;
+    right: 3px;
+}
+
+tabelas
+{
+    width: 100%;
+    height: 600px;
+    color: var(--lt);
+    grid-area: tabelas; 
+    border: 2px solid var(--bd);
+}
+
+
+tabelas .mat-tab-label-content
+{
+    width: 100%;
+    height: 49px;
+    position: relative;
+    top: 2px;
+    border: 2px solid var(--bd);
+    
+}
+
+tabelas .mat-tab-group
+{
+    margin: 15px;
+}
+
+.example-container, .mat-elevation-z8 
+{
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+    border: 1px solid var(--bd);
+}
+
+.example-container::-webkit-scrollbar, .mat-elevation-z8::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+tabelas .mat-tab-label-active
+{
+    padding: 0;
+    background-color: rgba(17, 17, 17, 0.247);
+    opacity: 1;
+}
+
+tabelas #mat-tab-label-0-0, #mat-tab-label-0-1
+{
+   
+    padding: 0;
+}
+
+tabelas table
+{
+    width: 100%;
+    border: 1px solid var(--bd);
+}
+tabelas table td button
+{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--bd);
+}
+
+.mat-header-row 
+{
+    display: none;
+}
+
+tbody
+{
+    border: 2px solid var(--bd);
+}
+
+login main 
+{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,39,114,1) 32%, rgba(49,49,133,1) 61%, rgba(0,212,255,1) 100%);
+    border-radius: 20px;
+    margin-top: 20vh;
+    color: #fff;
+    font-weight: bold;
+}
+
+login main form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+login main form .form-group
+{   
+  width: 50%;
+}
+
+login main form button
+{   
+    margin: 10px 0;
+    width: 50%;
+}
+
+app-page header button 
+{
+    position: relative;
+    left: 40%;
+    margin-top: 10px;
+    height: 50%;
+}

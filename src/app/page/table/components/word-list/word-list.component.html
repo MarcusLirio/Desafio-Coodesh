@@ -1,0 +1,22 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults || isRateLimitReached">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+      GitHub's API rate limit has been reached. It will be reset in one minute.
+    </div>
+  </div>
+
+  <div class="example-table-container">
+
+    <mat-table [dataSource]="data" class="mat-elevation-z8">
+      <ng-container matColumnDef="word">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Words </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let row"><input type="button" (click)="teste()" id="{{row.palavra}}"  value="{{row.palavra}}"></mat-cell>    
+      </ng-container>
+    
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
